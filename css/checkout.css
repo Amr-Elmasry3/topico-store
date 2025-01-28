@@ -15,15 +15,15 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 15px;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: #fcb700;
 }
 
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
 
@@ -492,6 +492,15 @@ h1, h2, h3, h4, h5, h6, p {
 .cart-section .content {
   flex-grow: 1;
   overflow-y: scroll;
+}
+.cart-section .content::-webkit-scrollbar {
+  width: 15px;
+}
+.cart-section .content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+.cart-section .content::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .cart-section .content .product-box {
   padding: 15px 0 0;
