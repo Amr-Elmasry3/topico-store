@@ -47,10 +47,10 @@
       width: 15px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: $color-yellow;
+      background-color: transparent;
     }
     &::-webkit-scrollbar-track {
-      background-color: $color-white;
+      background-color: transparent;
     }
     .product-box {
       padding: 15px 0 0;
