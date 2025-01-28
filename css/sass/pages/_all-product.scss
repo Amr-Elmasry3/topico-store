@@ -1,0 +1,131 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start All Products */ 
+.content {
+  margin: 20px 0;
+  .my-container {
+    .heading {
+      text-align: center;
+      .title {
+        @include set-font-color(22px, 700, $color-yellow);
+      }
+
+      .discription {
+        margin: 7px 0 !important;
+        line-height: 1.4;
+        max-width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        @include set-font-color(15px, 600, $color-gray);
+      }
+
+    }
+
+    .page-content {
+      display: flex;
+      gap: 20px;
+      margin: 35px 0;
+      @include breakpoints("sm") {
+        flex-direction: column;
+      }
+      .filter-icon {
+        width: fit-content;
+        height: fit-content;
+        background-color: $color-yellow;
+        padding: 5px 10px;
+        border-radius: $border-radius-one;
+        display: none;
+        cursor: pointer;
+        @include breakpoints("sm") {
+          display: block;
+        }
+        span {
+          @include set-font-color(16px, 700, $color-dark);
+        }
+
+        i {
+          @include set-font-color(14px, 900, $color-dark);
+        }
+
+      }
+
+      .filter {
+        width: 180px;
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        border-radius: $border-radius-one;
+        padding: 12px;
+        height: fit-content;
+        @include breakpoints("sm") {
+          display: none;
+          width: 100%;
+        }
+        h2 {
+          @include set-font-color(22px, 700, $color-dark);
+        }
+
+        > div {
+          margin: 12px 0;
+          h4 {
+            padding: 0px 0 6px;
+            border-bottom: 1px solid $color-border;
+            @include set-font-color(17px, 700, $color-yellow);
+          }
+
+          .choices {
+            .box {
+              padding: 5px 0;
+              @include d-flex(initial, center, space-between, 5px, initial);
+              label {
+                @include set-font-color(15px, 500, $color-gray);
+                &.color {
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 4px;
+                  &.red {
+                    background-color: red;
+                  }
+                  &.yellow {
+                    background-color: yellow;
+                  }
+                  &.black {
+                    background-color: black;
+                  }
+                  &.orange {
+                    background-color: orange;
+                  }
+                  &.blue {
+                    background-color: blue;
+                  }
+                  &.green {
+                    background-color: green;
+                  }
+                }
+              }
+
+              input {
+              }
+
+            }
+          }
+
+        }
+
+      }
+
+      .products {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 10px;
+      }
+
+    }
+  }
+}
+/* End All Products */ 

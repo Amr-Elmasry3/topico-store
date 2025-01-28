@@ -1,0 +1,59 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Main Heading */
+.main-heading {
+  @include d-flex(initial, center, space-between, 0, initial);
+  .left-part {
+
+    .title {
+    
+      h5 {
+        @include set-font-color(17px, 700, $color-dark);
+        span {
+          padding-left: 5px;
+          @include set-font-color(16px, 500, $color-gray);
+        }
+  
+      }
+  
+    }
+  
+    .father {
+      width: 250px;
+      height: 2px;
+      background-color: $color-border;
+      margin: 5px 0 0;
+      .child {
+        width: 30%;
+        height: 100%;
+        background-color: $color-yellow;
+      }
+  
+    }
+
+  }
+
+  .next-prev {
+    @include d-flex(row-reverse, initial, initial, 5px, initial);
+    div {
+      width: 25px;
+      height: 25px;
+      background-color: $color-yellow;
+      color: $color-white;
+      border-radius: $border-radius-one;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &[aria-disabled="true"] {
+        opacity: 0.4;
+      }
+    }
+
+  }
+
+}
+/* End Main Heading */ 

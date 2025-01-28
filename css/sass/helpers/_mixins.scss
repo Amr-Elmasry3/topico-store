@@ -1,0 +1,101 @@
+// Mixin Name => breakpoints
+// Mixin Job => Writing Formats In Different Screen Sizes
+// Sizes From Smaller To Larger => xs < sm < md < lg < xl 
+@mixin breakpoints($size) {
+  @if $size == "xs" {
+
+    @media (max-width: 575px) {
+      @content;
+    }
+
+  } @else if $size == "sm" {
+
+    @media (max-width: 767px) {
+      @content;
+    }
+
+  } @else if $size == "md" {
+
+    @media (max-width: 991px) {
+      @content;
+    }
+
+  } @else if $size == "lg" {
+
+    @media (max-width: 1029px) {
+      @content;
+    }
+
+  } @else if $size == "xl" {
+
+    @media (max-width: 1400px) {
+      @content;
+    }
+
+  }  
+}
+
+
+// Mixin Name => addprefixes
+// Mixin Job => Add Prefixes To Properties
+// $Property => Name Of Property
+// $Value => Value Of Property
+// $Prefixes => All Prefixes You Want To Need
+@mixin prefixes($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value; 
+  }
+
+  #{$property}: $value;
+}
+
+
+// Mixin Name => box-shadow
+// Mixin Job => Add Shadow To Boxes
+// $valuse => (right=(+px) or left=(-px)), (top=(+px) or bottom=(-px)), (blur), (spreed), (color)
+@mixin box-shadow($values...) {
+  @each $x, $y, $blur, $spreed, $color in $values {
+    box-shadow: $x $y $blur $spreed $color;
+  }
+}
+
+
+// Mixin Name => set-font-color
+// Mixin Job => Add Font-size, Font-weight, color To Elements
+// $fs => font-size
+// $fw => font-weight
+// $c => color
+@mixin set-font-color($fs, $fw, $c) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $c;
+}
+
+
+// Mixin Name => linear-gradient
+// Mixin Job => Make Linear Gradient To Boxes
+// $degree => Color Angle
+// $color-one => Color One In The Gradient
+// $color-two => Color Two In The Gradient 
+@mixin linear-gradient($degree, $color-one, $color-two) {
+  background-image: -webkit-linear-gradient($degree, $color-one, $color-two);
+  background-image: -moz-linear-gradient($degree, $color-one, $color-two);
+  background-image: linear-gradient($degree, $color-one, $color-two);
+}
+
+
+// Mixin Name => d-flex;
+// Mixin Job => Set Property For Flex Box
+// $direction => flex-dirextion
+// $align => align-items
+// $justify => justify-content
+// $gap => gap
+// $wrap => flex-wrap
+@mixin d-flex($direction, $align, $justify, $gap, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+  flex-wrap: $wrap;
+}

@@ -1,0 +1,22 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Botton One */
+.button-one {
+  border: none;
+  background-color: $color-yellow;
+  padding: 7px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-dark;
+  border-radius: $border-radius-one;
+  transition: $transition-duration;
+  &:hover {
+    background-color: #fcb700bf;
+    color: $color-dark;
+  }
+} 
+/* End Button One */

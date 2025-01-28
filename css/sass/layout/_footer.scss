@@ -1,0 +1,70 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Footer */
+.footer {
+  background-color: $color-gray;
+  .my-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(225px,1fr));
+    gap: 15px;
+    padding: 25px 0;
+    .logo-support {
+      .logo {
+        width: 115px;
+      }
+
+      .support {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin: 15px 0;
+        img {
+          width: 45px;
+        }
+
+        .info {
+          p {
+            @include set-font-color(14px, bold, $color-white);
+          }
+
+          h5{
+            margin: 3px 0 0 !important;
+            @include set-font-color(14px, bold, $color-yellow);
+          }
+
+        }
+      }
+    }
+
+    .links-box {
+      h5 {
+        margin: 0 0 5px !important;
+        @include set-font-color(17px, 700, $color-white);
+      }
+
+      .footer-links {
+        li {
+          width: fit-content;
+          transition: $transition-duration;
+          &:hover {
+            transform: translateX(10px);
+          }
+          &:hover > a {
+            color: $color-yellow;
+          }
+          a {
+            @include set-font-color(14px, 600, #eeeeeecc);
+            transition: $transition-duration;
+          }
+        }
+      }
+    }
+
+  }
+}
+/* End Footer */ 
+

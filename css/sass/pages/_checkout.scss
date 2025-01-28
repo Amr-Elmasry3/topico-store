@@ -1,0 +1,153 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+// Part Of Placeholder
+%same-box {
+  background-color: $color-white;
+  border-radius: 7px;
+  overflow: hidden;
+} 
+%same-form-box {
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+%same-h4 {
+  background-color: $color-yellow;
+  padding: 5px 10px;
+  @include set-font-color(17px, 700, $color-dark);
+}
+%same-label {
+  @include set-font-color(14px, 500, $color-dark);
+}
+%same-input {
+  background-color: $color-white !important;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-one;
+  padding: 2px 5px;
+  font-size: 14px;
+}
+
+/* Start Checkout Content */
+.checkout-page {
+  .search-box,
+  .cart {
+    display: none !important;
+  }
+}
+.checkout-content {
+  margin: 20px 0;
+  .my-container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    gap: 20px;
+    @include breakpoints("sm") {
+      grid-template-columns: repeat(1, 100%);
+      gap: 35px;
+    }
+    .payment-details {
+      .delivery-address {
+        @extend %same-box;
+        h4 {
+          @extend %same-h4
+        }
+
+        form {
+          padding: 10px;
+          div {
+            @extend %same-form-box;
+            label {
+              @extend %same-label;
+            }
+  
+            input {
+              @extend  %same-input;
+            }
+  
+          }
+        }
+
+      }
+
+      .coupon-code {
+        @extend %same-box;
+        margin: 10px 0 0;
+        h4 {
+          @extend %same-h4;
+        }
+
+        div {
+          @extend %same-form-box;
+          padding: 10px;
+          label {
+            @extend %same-label;
+          }
+  
+          input {
+            @extend %same-input;
+          }
+        }
+
+      }
+
+    }
+
+    .order-summary {
+      @extend %same-box;
+      height: 410px;
+      h4 {
+        @extend %same-h4;
+      }
+
+      .products {
+        overflow-y: scroll;
+        height: 60%;
+        margin: 0 10px;
+        .product {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 12px 0;
+          border-bottom: 1px solid $color-border;
+          img {
+            width: 90px;
+          } 
+
+          .details {
+            .name {
+              line-height: 1.4;
+              @include set-font-color(14px, 700, $color-dark);
+            }
+
+            .price {
+              @include set-font-color(14px, 700, $color-gray);
+            }
+          }
+
+        }
+      }
+
+      .total {
+        padding: 0 0 5px;
+        margin: 10px;
+        border-bottom: 1px solid $color-border;
+        font-size: 17px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      button {
+        margin: 10px;
+        width: calc(100% - 20px);
+        font-weight: 700;
+      }
+    }
+  }
+}
+/* End Checkout Content */  

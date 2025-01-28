@@ -1,0 +1,111 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Cart */
+.cart-section {
+  position: fixed;
+  z-index: 60;
+  right: -400px;
+  top: 0;
+  height: 100%;
+  background-color: $color-white;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid $color-border;
+  .heading {
+    padding: 15px 0;
+    border-bottom: 1px solid $color-border;
+    @include d-flex(initial, center, space-between, 0, initial);
+    h5 {
+      @include set-font-color(17px, 700, $color-dark);
+      span {
+        padding-left: 5px;
+        @include set-font-color(14px, 600, $color-gray);
+      }
+
+    }
+
+    i {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: $color-yellow;
+      @include d-flex(initial, center, center, 0, initial);
+      cursor: pointer;
+    }
+
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow-y: scroll;
+    .product-box {
+      padding: 15px 0 0;
+      @include d-flex(initial, center, space-between, 5px, initial);
+      .picture {
+        img {
+          width: 80px;
+        }
+      }
+
+      .info {
+        text-align: center;
+        .product-name {
+          max-width: 160px;
+          line-height: 1.2;
+          @include set-font-color(14px, bold, $color-dark);
+        }
+
+        .product-price {
+          @include set-font-color(14px, 700, $color-gray);
+        }
+
+      }
+
+      .delete {
+        &:hover > i{
+          color: red;
+          transition: $transition-duration;
+        }
+        i {
+          font-size: 15px;
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+  }
+
+  .cart-details {
+
+    .cart-subtotal {
+        padding: 10px 0;
+        border-top: 1px solid $color-border;
+        @include d-flex(initial, center, space-between, 0, initial);
+      h5 {
+        @include set-font-color(16px, 700, $color-gray);
+      }
+
+      .subtotal-value {
+        @include set-font-color(14px, bold, $color-yellow);
+      }
+
+    }
+
+    .cart-buttons {
+      @include d-flex(column, initial, initial, 10px, initial);
+      a {
+        text-align: center;
+      }
+    }
+
+  }
+
+}
+/* End Cart */

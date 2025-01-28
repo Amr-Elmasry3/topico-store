@@ -1,0 +1,201 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Headr */
+.headr {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-border;
+  .my-container {
+
+    .upper-part {
+      @include d-flex(initial, center, space-between, 0, initial);
+      padding: 12px 0;
+      border-bottom: 1px solid $color-border;
+      @include breakpoints("xs") {
+        padding: 12px 0 62px;
+      }
+
+      .logo {
+        position: relative;
+        z-index: 55;
+        img {
+          width: 115px;
+        }
+      }
+
+      .search-box {
+        background-color: $color-white;
+        border: 2px solid $color-yellow;
+        border-radius: $border-radius-one;
+        display: flex;
+        overflow: hidden;
+        @include breakpoints("xs") {
+          position: absolute;
+          top: 65px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        input {
+          background-color: transparent;
+          border: none;
+          padding: 5px;
+          &::placeholder {
+            font-size: 14px;
+          }
+        }
+        button {
+          border-radius: 0;
+        }
+      }
+
+      .cart {
+        @include d-flex(initial, center, initial, 10px, initial);
+        .icon {
+          position: relative;
+          background-color: $color-white;
+          border: 1px solid $color-border;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          @include d-flex(initial, center, center, 0, initial);
+          transition: $transition-duration;
+          &:hover {
+            background-color: $color-yellow;
+          }
+          cursor: pointer;
+          i {
+            @include set-font-color(14px, 900, $color-dark);
+          }
+          span {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: $color-yellow;
+            border-radius: 50%;
+            top: -8px;
+            right: -4px;
+            @include set-font-color(10px, initial, $color-dark);
+            @include d-flex(initial, center, center, 0, initial);
+          }
+        }
+        .info {
+          @include d-flex(column, initial, initial, 0, initial);
+          .title {
+            @include set-font-color(14px, 600, $color-yellow);
+          }
+          .value {
+            @include set-font-color(14px, 600, $color-dark);
+          }
+        }
+      }
+
+    }
+
+    .bottom-part {
+      @include d-flex(initial, center, space-between, 0, initial);
+      padding: 10px 0;
+
+      .menu-icon {
+        display: none;
+        flex-direction: column;
+        width: 20px;
+        height: 17px;
+        cursor: pointer;
+        @include breakpoints("sm") {
+          display: flex;
+        }
+        span {
+          position: relative;
+          width: 100%;
+          height: 3px;
+          background-color: $color-yellow;
+          &:first-of-type {
+            top: 0;
+          }
+          &:nth-of-type(2) {
+            top: 4px;
+          }
+          &:last-of-type {
+            top: 8px;
+          }
+        }
+      }
+
+      .headr-links {
+        @include d-flex(initial, center, initial, 5px, initial);
+        @include breakpoints("sm") {
+          position: fixed;
+          z-index: 50;
+          top: 0;
+          left: -600px;
+          @include d-flex(column, center, center, 30px, initial);
+          background-color: $color-white;
+          height: 100%;
+          width: 50%;
+          border-right: 2px solid #e6e6e6;
+        }
+        @include breakpoints("xs") {
+          width: 80%;
+        }
+        .close {
+          display: none;
+          @include breakpoints("sm") {
+            position: absolute;
+            top: 28px;
+            right: 25px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $color-yellow;
+            @include d-flex(initial, center, center, 0, initial);
+            cursor: pointer;
+          }
+        }
+        li {
+          padding: 0 5px 10px;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background-color: $color-yellow;
+            left: 0;
+            bottom: 0;
+            transition: $transition-duration;
+          }
+          &.active::after {
+            width: 100%;
+          }
+          &.active > a {
+            color: $color-yellow;
+          }
+          &:hover::after {
+            width: 100%;
+          }
+          &:hover > a {
+            color: $color-yellow;
+          }
+          a {
+            @include set-font-color(14px, 700, $color-dark);
+            transition: $transition-duration;
+          }
+        }
+      }
+
+      .login-signup {
+        @include d-flex(initial, center, initial, 10px, initial);
+        i {
+          padding-left: 7px;
+          @include set-font-color(16px, 900, $color-dark);
+        }
+      }
+      
+    }
+
+  }
+}
+/* End Headr */

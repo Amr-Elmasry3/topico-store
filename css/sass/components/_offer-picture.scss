@@ -1,0 +1,31 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Offer Picture */
+.offer-picture {
+  position: relative;
+  border-radius: $border-radius-one;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 40%;
+    background-color: #ffffff36;
+    top: 50%;
+    left: -280%;
+    transform: translateY(-50%) rotate(30deg);
+    transition: 1s;
+  }
+  &:hover::after {
+    left: 40%;
+  }
+  img {
+    width: 100%;
+    height: 170px;
+  }
+}
+/* End Offer Picture */  

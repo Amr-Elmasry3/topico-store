@@ -1,0 +1,77 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Login And Sign Up Card */
+.login-page,
+.sign-up-page {
+  position: relative;
+  top: 50%;
+  transform: translateY(-65%);
+}
+.my-container {
+  form {
+    margin: 40px 0;
+    width: 300px;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    padding: 30px 20px;
+    border-radius: $border-radius-one;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    h2 {
+      margin: 0 0 15px !important;
+      text-align: center;
+      @include set-font-color(24px, bold, $color-dark);
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid $color-border;
+      border-radius: $border-radius-one;
+      padding: 2px 7px;
+      margin: 0 0 10px;
+      &::placeholder {
+        font-size: 14px;
+        color: $color-gray;
+      }
+    }
+
+    .forgot-pass {
+      display: block;
+      text-align: right;
+      color: gray;
+      margin: 5px 0 10px;
+      @include set-font-color(14px, 500, $color-gray);
+      transition: $transition-duration;
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+
+    button {
+      width: 100%;
+      &:last-of-type {
+        @include d-flex(initial, center, center, 5px, initial);
+        img {
+          width: 19px;
+        }
+      }
+    }
+
+    p {
+      margin: 10px 0 !important;
+      @include set-font-color(14px, 500, $color-gray);
+      .sign-up {
+        font-size: 15px;
+        font-weight: 700;
+        color: #fcb700;
+        text-decoration: underline !important;
+        @include set-font-color(15px, 700, $color-yellow);
+      }
+    }
+  } 
+} 

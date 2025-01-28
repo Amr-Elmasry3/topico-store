@@ -1,0 +1,129 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Product Details */
+.product-details {
+  margin: 20px 0;
+  padding: 25px 0;
+  background-color: $color-white;
+  .my-container {
+    display: flex;
+    align-items: center;
+    @include breakpoints("sm") {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+    .pictures {
+      min-width: 40%;
+      text-align: center;
+      .main-picture {
+        img {
+          width: 260px;
+        }
+      }
+
+      .other-pictures {
+        img {
+          width: 80px;
+          cursor: pointer;
+        }
+      }
+
+    }
+
+    .details {
+      .name {
+        @include set-font-color(17px, bold, $color-dark);
+      }
+
+      .stars {
+        margin: 10px 0;
+        @include d-flex(initial, center, initial, 4px, initial);
+        @include breakpoints("sm") {
+          justify-content: center;
+        }
+        i {
+          font-size: 14px;
+          color: $color-yellow;
+        }
+      }
+
+      .price {
+        .new-price {
+          @include set-font-color(16px, bold, $color-yellow);
+        }
+
+        .old-price {
+          padding-left: 4px;
+          text-decoration: line-through;
+          @include set-font-color(14px, 500, $color-gray);
+        }
+
+      }
+
+      h5 {
+        margin: 5px 0 !important;
+        @include set-font-color(15px, 700, $color-dark);
+        span {
+          color: #fcb700;
+        }
+      }
+
+      h6.info {
+        display: inline;
+        @include set-font-color(15px, 700, $color-dark);
+        p {
+          display: inline;
+          @include set-font-color(15px, 700, $color-yellow);
+        }
+      }
+
+      .summary {
+        font-size: 14px;
+        font-weight: 600;
+        color: $color-gray;
+        margin: 5px 0 !important;
+        @include set-font-color(14px, 600, $color-gray);
+      }
+
+      .text {
+        @include set-font-color(15px, bold, $color-dark);
+      }
+
+      button {
+        margin: 12px 0;
+        font-weight: bold;
+      }
+
+      .actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include breakpoints("sm") {
+          justify-content: center;
+        }
+        i {
+          width: 30px;
+          height: 30px;
+          background-color: $color-light;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          cursor: pointer;
+          transition: $transition-duration;
+          &:hover {
+            background-color: $color-yellow;
+          }
+        }
+      }
+    }
+
+  }
+}
+/* End Product Details */

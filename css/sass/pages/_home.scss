@@ -1,0 +1,209 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Landing-Section */
+.landing-section {
+  margin: 25px 0;
+  .my-container {
+    display: flex;
+    gap: 30px;
+    min-height: 375px;
+    @include breakpoints("sm") {
+      min-height: 250px;
+    }
+    .type-of-search {
+      min-width: 225px;
+      height: fit-content;
+      background-color: $color-white;
+      border: 1px solid $color-border;
+      @include breakpoints("sm") {
+        display: none;
+      }
+      .heading {
+
+        h4 {
+          padding: 10px;
+          @include set-font-color(17px, bold, $color-yellow);
+        }
+
+      }
+
+      ul {
+
+        li {
+          padding: 6px 10px;
+          border-top: 1px solid $color-border;
+          transition: $transition-duration;
+          &:hover {
+            background-color: $color-light;
+          }
+          &:hover > a{
+            color: $color-yellow;
+          }
+          a {
+            @include set-font-color(14px, 700, $color-dark);
+            transition: $transition-duration;
+          }
+
+        }
+
+      }
+
+    }
+    
+    .swiper {
+
+      .swiper-wrapper {
+
+        .swiper-slide {
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+
+        }
+
+      }
+
+      .swiper-pagination {
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        .swiper-pagination-bullet {
+          background-color: $color-yellow;
+          width: 22px;
+          height: 4px;
+          border-radius: 10px;
+        }
+      }
+
+    }
+
+  }
+}
+/* End Landing-Section */
+
+/* Start services */
+.services {
+  margin: $margin-section;
+  .my-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+    .box {
+      background-color: $color-white;
+      padding: 10px;
+      border-radius: $border-radius-one;
+      @include d-flex (initial, center, initial, 12px, initial);
+      cursor: pointer;
+      transition: $transition-duration;
+      &:hover {
+        background-color: $color-light;
+      }
+      img {
+        width: 40px;
+      }
+
+      .info {
+
+        h5 {
+          @include set-font-color(16px, bold, $color-dark);
+        }
+
+        p {
+        line-height: 1.4;
+        @include set-font-color(14px, 500, $color-gray);
+        }
+      }
+    }
+
+  }
+}
+/* End Services */
+
+/* Start Offer Part One And Offer Part Three*/
+.offer-p1,.offer-p3 {
+  margin: $margin-section;
+  .my-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+}
+/* End Offer Part One And Offer Part Three*/  
+
+/* Start On Sale Section */
+.on-sale-section {
+  margin: $margin-section;
+  position: relative;
+}
+/* End On Sale Section */ 
+
+/* Start Offer Part Two */
+.offer-p2 {
+  margin: $margin-section;
+  .my-container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    gap: 20px;
+    @include breakpoints("sm") {
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+}
+/* End Offer Part Two */ 
+
+/* Start Computer And Desktop Section */
+.computer-desktop {
+  margin: $margin-section; 
+  .my-container {
+
+    .content {
+      margin: 25px 0 0;
+      display: flex;
+      gap: 15px;
+      .content-img {
+        width: 225px;
+        @include breakpoints("xs") {
+          display: none;
+        }
+      }
+
+      .computer-desktop-swiper {
+        margin: 0;
+      }
+    }
+
+  }
+}
+/* End Computer And Desktop Section */
+
+/* Start Phones And Tablets Section */
+.phones-tablets {
+  margin: $margin-section; 
+  .my-container {
+
+    .content {
+      margin: 25px 0 0;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 15px;
+      .content-img {
+        width: 225px;
+        @include breakpoints("xs") {
+          display: none;
+        }
+      }
+
+      .phones-tablets-swiper {
+        margin: 0;
+      }
+    }
+
+  }
+}
+/* End Phones And Tablets Section */

@@ -1,0 +1,22 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Back Top Button */
+.back-top {
+  background-color: #666666d1;
+  padding: 10px 0;
+  cursor: pointer;
+  .my-container {
+    text-align: center;
+    h5 {
+      font-size: 15px;
+      font-weight: 700;
+      color: white;
+      @include set-font-color(15px, 700, $color-white);
+    }
+  }
+}
+/* End Back Top Button */  

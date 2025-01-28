@@ -1,0 +1,99 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Product Card */
+.swiper {
+  margin: 25px 0;
+  .swiper-slide {
+    overflow: hidden;
+  }
+}
+
+.product-card {
+  position: relative;
+  background-color: $color-white;
+  border-radius: $border-radius-one;
+  padding: 20px 10px;
+  text-align: center;
+  border: 1px solid $color-border;
+  overflow: hidden;
+  &:hover .right-box{
+    left: 17px;
+  }
+  .offer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    padding: 2px 6px;
+    border-radius: $border-radius-one;
+    @include set-font-color(12px, bold, $color-white)
+  }
+
+  .right-box {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-65%);
+    @include d-flex(column, initial, initial, 10px, initial);
+    transition: $transition-duration;
+    i {
+      width: 30px;
+      height: 30px;
+      background-color: $color-white;
+      box-shadow: inset 0 0 6px #0000006b;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      @include set-font-color(14px, 900, $color-dark);
+      transition: $transition-duration;
+      &.added {
+        background-color: $color-yellow;
+      }
+    }
+
+  }
+
+  .product-img {
+    width: 150px;
+  }
+
+  .product-title {
+    display: block;
+    @include set-font-color(14px, 700, $color-blue);
+    transition: $transition-duration;
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
+  .stars {
+    margin: 10px 0;
+    @include d-flex(initial, center, center, 4px, initial);
+    i {
+      font-size: 14px;
+      color: $color-yellow;
+    }
+
+  }
+
+  .price {
+
+    .new-price {
+      @include set-font-color(16px, bold, $color-yellow);
+    }
+
+    .old-price {
+      padding-left: 4px;
+      text-decoration: line-through;
+      @include set-font-color(14px, 500, $color-gray);
+    }
+
+  }
+}
+/* End Product Card */ 

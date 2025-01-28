@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Product</title>
+  <!-- Link Css File -->
+  <link rel="stylesheet" href="css/all-product.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Link Bootstrap File -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="all-product-page">
+    <!-- Start Headr -->
+    <div class="headr" id="headr">
+      <div class="my-container">
+
+        <div class="upper-part">
+
+          <div class="logo">
+            <img src="images/logo-black.png">
+          </div>
+
+          <div class="search-box">
+            <input type="search" placeholder="Search for products...">
+            <button class="button-one">Search</button>
+          </div>
+
+          <div class="cart">
+            <div class="icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="count count-in-cart">0</span>
+            </div>
+            <div class="info">
+              <span class="title">My Cart:</span>
+              <span class="value subtotal-of-cart">$0</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bottom-part">
+
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul class="headr-links">
+            <i class="fa-solid fa-xmark close"></i>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="all-product.html">All Product</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+
+          <div class="login-signup">
+            <div class="login">
+              <a href="login.html" class="button-one">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+            </div>
+            <div class="signup">
+              <a href="signup.html" class="button-one">Sign up<i class="fa-solid fa-user-plus"></i></a>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+    <!-- End Headr -->
+
+    <!-- Start Cart -->
+    <div class="cart-section">
+
+      <div class="heading">
+        <h5>My Cart<span>(<span class="count-in-cart">0</span> items in cart )</span></h5>
+        <i class="fa-solid fa-xmark cart-close"></i>
+      </div>
+
+      <div class="content">
+      </div>
+
+      <div class="cart-details">
+
+        <div class="cart-subtotal">
+          <h5>Cart Subtotal</h5>
+          <span class="subtotal-value subtotal-of-cart">$0</span>
+        </div>
+
+        <div class="cart-buttons">
+          <a href="checkout.html" class="button-one">Proceed To Checkout</a>
+          <a href="all-product.html" class="button-one">Shop More</a>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Cart -->
+
+    <div class="content">
+      <div class="my-container">
+
+        <div class="heading">
+          <h5 class="title">Experience the Future of Technology with Our Topico.</h5>
+          <p class="discription">Find every thing you needto transform your home into a smart, connectes space. Our Topico store offers a wide range of devices to fit your needs.</p>
+        </div>
+
+        <div class="page-content">
+
+          <div class="filter-icon">
+            <span>Filter</span>
+            <i class="fa-solid fa-filter"></i>
+          </div>
+
+          <div class="filter">
+            <h2>Filter</h2>
+
+            <div class="section-one">
+              <h4>Categorie</h4>
+
+              <div class="choices">
+
+                <div class="box">
+                  <label for="a1">Phones</label>
+                  <input type="checkbox" name="categorie" value="Phones" id="a1">
+                </div>
+
+                <div class="box">
+                  <label for="a2">Tablets</label>
+                  <input type="checkbox" name="categorie" value="Tablets" id="a2">
+                </div>
+
+                <div class="box">
+                  <label for="a3">Electronics</label>
+                  <input type="checkbox" name="categorie" value="Electornics" id="a3">
+                </div>
+
+                <div class="box">
+                  <label for="a4">TV</label>
+                  <input type="checkbox" name="categorie" value="TV" id="a4">
+                </div>
+
+                <div class="box">
+                  <label for="a5">Fashion</label>
+                  <input type="checkbox" name="categorie" value="Fashion" id="a5">
+                </div>
+
+                <div class="box">
+                  <label for="a6">Watches</label>
+                  <input type="checkbox" name="categorie" value="Watches" id="a6">
+                </div>
+
+              </div>
+            </div>
+
+            <div class="section-two">
+              <h4>Brand</h4>
+
+              <div class="choices">
+
+                <div class="box">
+                  <label for="b1">Apple</label>
+                  <input type="checkbox" name="categorie" value="Apple" id="b1">
+                </div>
+
+                <div class="box">
+                  <label for="b2">Samsung</label>
+                  <input type="checkbox" name="categorie" value="Samsung" id="b2">
+                </div>
+
+                <div class="box">
+                  <label for="b3">Intel</label>
+                  <input type="checkbox" name="categorie" value="Intel" id="b3">
+                </div>
+
+                <div class="box">
+                  <label for="b4">Oppo</label>
+                  <input type="checkbox" name="categorie" value="Oppo" id="b4">
+                </div>
+
+                <div class="box">
+                  <label for="b5">Xiaomi</label>
+                  <input type="checkbox" name="categorie" value="Xiaomi" id="b5">
+                </div>
+
+                <div class="box">
+                  <label for="b6">Huawei</label>
+                  <input type="checkbox" name="categorie" value="Huawei" id="b6">
+                </div>
+
+              </div>
+            </div>
+
+            <div class="section-three">
+              <h4>Color</h4>
+
+              <div class="choices">
+
+                <div class="box">
+                  <label for="c1" class="color red"></label>
+                  <input type="checkbox" name="categorie" value="red" id="c1">
+                </div>
+
+                <div class="box">
+                  <label for="c2" class="color yellow"></label>
+                  <input type="checkbox" name="categorie" value="yellow" id="c2">
+                </div>
+
+                <div class="box">
+                  <label for="c3" class="color black"></label>
+                  <input type="checkbox" name="categorie" value="black" id="c3">
+                </div>
+
+                <div class="box">
+                  <label for="c4" class="color blue"></label>
+                  <input type="checkbox" name="categorie" value="blue" id="c4">
+                </div>
+
+                <div class="box">
+                  <label for="c5" class="color orange"></label>
+                  <input type="checkbox" name="categorie" value="orange" id="c5">
+                </div>
+
+                <div class="box">
+                  <label for="c6" class="color green"></label>
+                  <input type="checkbox" name="categorie" value="green" id="c6">
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="products">
+
+            <div class="product-card" id="1">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-1.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="2">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-2.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="3">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-3.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="4">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-4.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="5">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-5.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="6">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-6.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="7">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-7.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="8">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-8.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="9">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-9.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="10">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-10.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="11">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-11.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="12">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-12.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="13">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-13.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="14">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-14.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="15">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-15.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+            <div class="product-card" id="16">
+
+              <span class="offer">%17</span>
+
+              <div class="right-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-share"></i>
+              </div>
+
+              <img src="images/product-16.jpg" class="product-img">
+
+              <a href="product-details.html" class="product-title">Original Mobile Android Dual SIM Smart Phone G4</a>
+
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+
+              <div class="price">
+                <span class="new-price">$180</span>
+                <span class="old-price">$220</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Start Subscribe Section -->
+    <div class="subscribe">
+      <div class="my-container">
+
+        <div class="signup-part">
+
+          <img src="images/icon_email.png">
+
+          <div class="details">
+
+            <h4>Sign Up To Newsletter</h4>
+
+            <p>Get email updates about our latest shop...and receive</p>
+
+            <h5>$25 Coupon For First Shopping</h5>
+
+          </div>
+
+        </div>
+
+        <div class="subscribe-box">
+          <input type="email" placeholder="Enter your email here...">
+          <button class="button-one">Subscribe</button>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Subscribe Section -->
+
+    <!-- Start Back Top -->
+    <div class="back-top">
+      <a href="#headr">
+        <div class="my-container">
+          <h5>Back To Top</h5>
+        </div>
+      </a>
+    </div>
+    <!-- End Back top -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="my-container">
+
+        <div class="logo-support">
+
+          <img src="images/logo-white.png" class="logo">
+
+          <div class="support">
+
+            <img src="images/features3.png">
+
+            <div class="info">
+              <p>Hotline Free 24/24:</p>
+              <h5>(+100) 124 456 6789</h5>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="links-box">
+          
+          <h5>FAQa & Help</h5>
+
+          <ul class="footer-links">
+            <li><a href="">FASs</a></li>
+            <li><a href="">Ordering Tracking</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Help Center</a></li>
+          </ul>
+
+        </div>
+
+        <div class="links-box">
+          
+          <h5>Shipping & Deilvery</h5>
+
+          <ul class="footer-links">
+            <li><a href="">Deilvery Information</a></li>
+            <li><a href="">Discount</a></li>
+            <li><a href="">Payment & Shipping</a></li>
+            <li><a href="">Estimated Deilvery Time</a></li>
+            <li><a href="">Shipping Quide</a></li>
+          </ul>
+
+        </div>
+
+        <div class="links-box">
+          
+          <h5>Information</h5>
+
+          <ul class="footer-links">
+            <li><a href="">Popular</a></li>
+            <li><a href="">Our Services</a></li>
+            <li><a href="">Your Account</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Trems & Conditions</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- End Footer -->
+
+  </div>
+
+  <script src="js/all-product.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/add-products-to-cart.js"></script>
+</body>

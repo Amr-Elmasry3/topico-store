@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout page</title>
+  <!-- Link Css File -->
+  <link rel="stylesheet" href="css/checkout.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Link Bootstrap File -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="checkout-page">
+    <!-- Start Headr -->
+    <div class="headr" id="headr">
+      <div class="my-container">
+
+        <div class="upper-part">
+
+          <div class="logo">
+            <img src="images/logo-black.png">
+          </div>
+
+          <div class="search-box">
+            <input type="search" placeholder="Search for products...">
+            <button class="button-one">Search</button>
+          </div>
+
+          <div class="cart">
+            <div class="icon">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="count count-in-cart">0</span>
+            </div>
+            <div class="info">
+              <span class="title">My Cart:</span>
+              <span class="value subtotal-of-cart">$0</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="bottom-part">
+
+          <div class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <ul class="headr-links">
+            <i class="fa-solid fa-xmark close"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="all-product.html">All Product</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+
+          <div class="login-signup">
+            <div class="login">
+              <a href="login.html" class="button-one">Login<i class="fa-solid fa-right-to-bracket"></i></a>
+            </div>
+            <div class="signup">
+              <a href="signup.html" class="button-one">Sign up<i class="fa-solid fa-user-plus"></i></a>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+    <!-- End Headr -->
+
+    <!-- Start Cart -->
+    <div class="cart-section">
+
+      <div class="heading">
+        <h5>My Cart<span>(<span class="count-in-cart">0</span> items in cart )</span></h5>
+        <i class="fa-solid fa-xmark cart-close"></i>
+      </div>
+
+      <div class="content"></div>
+
+      <div class="cart-details">
+
+        <div class="cart-subtotal">
+          <h5>Cart Subtotal</h5>
+          <span class="subtotal-value subtotal-of-cart">$0</span>
+        </div>
+
+        <div class="cart-buttons">
+          <a href="checkout.html" class="button-one">Proceed To Checkout</a>
+          <a href="all-product.html" class="button-one">Shop More</a>
+        </div>
+
+      </div>
+    </div>
+    <!-- End Cart -->
+
+    <!-- Start Checkout Content -->
+    <div class="checkout-content">
+      <div class="my-container">
+
+        <div class="payment-details">
+
+          <div class="delivery-address">
+            <h4>Delivery Address</h4>
+
+            <form>
+
+              <div class="box">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+              </div>
+
+              <div class="box">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+              </div>
+
+              <div class="box">
+                <label for="address">Address</label>
+                <input type="text" id="address">
+              </div>
+
+              <div class="box">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone">
+              </div>
+              
+            </form>
+
+          </div>
+
+          <div class="coupon-code">
+            <h4>Coupon Code</h4>
+
+            <div class="box">
+              <label for="coupon">Coupon Code</label>
+              <input type="text" id="coupon">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="order-summary">
+          <h4>Order Summary</h4>
+
+          <div class="products">
+          </div>
+
+          <div class="total">
+            <span>Total:</span>
+            <span class="total-value">$220</span>
+          </div>
+
+          <button class="button-one">Place Order</button>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- End Checkout-Content -->
+
+    <!-- Start Footer -->
+    <div class="footer">
+      <div class="my-container">
+
+        <div class="logo-support">
+
+          <img src="images/logo-white.png" class="logo">
+
+          <div class="support">
+
+            <img src="images/features3.png">
+
+            <div class="info">
+              <p>Hotline Free 24/24:</p>
+              <h5>(+100) 124 456 6789</h5>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="links-box">
+          
+          <h5>FAQa & Help</h5>
+
+          <ul class="footer-links">
+            <li><a href="">FASs</a></li>
+            <li><a href="">Ordering Tracking</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Events</a></li>
+            <li><a href="">Help Center</a></li>
+          </ul>
+
+        </div>
+
+        <div class="links-box">
+          
+          <h5>Shipping & Deilvery</h5>
+
+          <ul class="footer-links">
+            <li><a href="">Deilvery Information</a></li>
+            <li><a href="">Discount</a></li>
+            <li><a href="">Payment & Shipping</a></li>
+            <li><a href="">Estimated Deilvery Time</a></li>
+            <li><a href="">Shipping Quide</a></li>
+          </ul>
+
+        </div>
+
+        <div class="links-box">
+          
+          <h5>Information</h5>
+
+          <ul class="footer-links">
+            <li><a href="">Popular</a></li>
+            <li><a href="">Our Services</a></li>
+            <li><a href="">Your Account</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Trems & Conditions</a></li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- End Footer -->
+
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>

@@ -1,0 +1,20 @@
+// Import Global Rules
+@use "./sass/layout/global-rules" as *;
+
+// Import Headr File
+@use "./sass/layout/headr" as *;
+
+// Import Checkout File
+@use "./sass/pages/checkout" as *;
+
+// Import Cart File
+@use "./sass/layout/cart" as *;
+
+// Import Footer File
+@use "./sass/layout/footer" as *;
+
+// Import Buttons File
+@use "./sass/components/buttons" as *;
+
+// Import Buttons File
+@use "./sass/components/buttons" as *;

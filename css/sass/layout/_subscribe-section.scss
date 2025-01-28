@@ -1,0 +1,64 @@
+// Import Variables File
+@use "../helpers/variables" as *;
+
+// Import Mixins File
+@use "../helpers/mixins" as *;
+
+/* Start Subscribe Section */
+.subscribe {
+  background-color: white;
+  .my-container {
+    padding: 25px 0;
+    @include d-flex(initial, center, space-between, 10px, initial);
+    @include breakpoints("md") {
+      text-align: center;
+      @include d-flex(column, center, space-between, 20px, initial);
+    }
+    .signup-part {
+      @include d-flex(initial, center, initial, 15px, initial);
+      img {
+        width: 50px;
+      }
+
+      .details {
+        h4 {
+          @include set-font-color(17px, bold, $color-dark);
+        }
+
+        p {
+          margin: 2px 0 !important;
+          @include set-font-color(14px, initial, $color-gray);
+        }
+
+        h5 {
+          @include set-font-color(14px, initial, $color-dark);
+        }
+
+      }
+
+    }
+
+    .subscribe-box {
+      background-color: $color-white;
+      border: 2px solid $color-yellow;
+      border-radius: $border-radius-one;
+      display: flex;
+      overflow: hidden;
+      input {
+        background-color: transparent;
+        border: none;
+        padding: 5px;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+
+      button {
+        border-radius: 0;
+      }
+
+    }
+
+  }
+}
+/* End Subscribe Section */
