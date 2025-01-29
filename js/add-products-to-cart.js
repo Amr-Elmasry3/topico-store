@@ -46,6 +46,8 @@ cartIcons.forEach((cart) => {
   });
 });
 
+removeProductFromCartByDeleteIcon();
+
 // Part Of Functions
 
 function setCountOfProductsInCart(count) {
